@@ -1,39 +1,72 @@
-# Broaf
-소프트웨어 공학 Broaf 깃허브
+# TEAM Broaf
 
+### 📍 GPS 기반 SNS 앱 "Broaf"
 
+> **내 주변**을 기록하고, 지도로 공유하는 **로컬 SNS**  
+> 카카오맵 위에 타임라인과 경로를 얹었습니다
 
-//오전 1:42 2023-11-20 SEjiji
+<br>
 
-com.example.broaf 폴더 안에 있는 Activity/Fragment.java 파일이랑 layout 안에 있는 activity_/fragment_.xml은 자유롭게 수정하시면 됩니다
-지우거나 이름 바꾸셔도 ㄱㅊ
-근데 나중에 하단바 만들고 나선 NoticeFragment.java랑 MyinfoFragment.java는 삭제 혹은 이름 변경을 가급적 삼가주세요
-이유: 하단바 깨짐
-그러나 꼭 필요하면 저한테 말하고 나서 MainActivity.java에서 메뉴바 메소드에서 연결 프래그먼트 바꾸심 됨
+## 📑 목차
+1. [프로젝트 소개](#-프로젝트-소개)
+2. [주요 기능](#-주요-기능)
+3. [주요 화면 및 기능 소개](#-주요-화면-및-기능-소개)
+4. [주요 기술](#-주요-기술)
+5. [기술 스택](#-기술-스택)
+6. [시스템 아키텍처](#%EF%B8%8F-시스템-아키텍처)
+7. [팀원 정보](#-팀원-정보)
 
+<br>
 
+## 📋 프로젝트 소개
 
-**
-일단 하단바 노출 여부랑 페이지에 머무는 시간에 따라 임의로 Activity랑 Fragment를 분류해뒀는데 이 또한 적당히 수정 부탁
+<img src="assets/broaf_icon.png" height="160">
 
--Activity: 하단바를 사용할 수 없음. 유저가 페이지에 머무는 시간이 김. 로그인, 포스트에디터(게시글 작성 및 수정 등)
--fragment: 하단바를 사용할 수 있음*. MainActivity 안에서 fragment만 이래저래 전환되거나 열리고 닫힐 것. 유저가 짧게 머뭄.
-*(하단바는 activity_main에 제작될 것임)
+**Broaf**는 사용자의 위치·동선을 기반으로 **포스트를 작성**하고,  
+**지도·리스트 UI**로 타임라인을 확인하는 **GPS 기반 SNS 앱**입니다.  
+개발 당시 여러 작업(지도, 경로, 리스트, 학업) 병행으로 부담이 컸지만,  
+우선순위 재정의·작업 분할·일정 관리로 프로젝트를 완수했습니다.
 
--MainActivity
-    : 로그인, 포스트에디터에 사용될 frag를 제외한 주요 fragments들은 여기서 켜고 꺼지고 바뀌고 함(검색frag, 홈frag(지도), 알림frag, 내정보frag)
-    기본적으론 지도가 있는 홈 frag가 호출되어있음
+### 프로젝트 정보
+| 항목 | 내용 |
+| --- | --- |
+| 서비스명 | Broaf |
+| 사용 기술 | **Java**, Android Studio, **Firebase**, **Kakao Map API** |
+| 역할 | **지도 경로 표시**, **리사이클러뷰 목록 UI**, 인증/데이터 연동 |
 
--이후 추가할 fragments (임의)
-    (1) postviewer fragment 
-        :홈frag의 mapview에서 label 클릭시 add, 검색 결과에서 누르면 add, 
-        내 게시글 모아보기에서 누르면 add, 신고함에서 누르면 add(신고글버전.xml로 호출) 등등..
+<br>
 
-    그 외 내게시글 모아보기 등등
+## ✨ 주요 기능
 
+1. **지도 피드**: 내 주변 포스트 클러스터링, 상세 보기   
+2. **게시글 작성**: 사진/텍스트/위치 태그, 공개 범위 설정  
+3. **알림**: 댓글/좋아요/팔로우 알림
 
+<br>
 
+## 🚀 주요 화면 및 기능 소개
 
-이렇게 하는거 맞는건가
-솔직히 잘 모르겠네요
-일단 임의로 잡아둔 그림이라 다 갈아엎어야 할지도
+- **지도 화면**: 마커·클러스터 · 현재 위치 추적  
+- **리스트**: RecyclerView + ViewHolder 패턴
+- **작성/상세**: 위치 태그·이미지 첨부·댓글
+
+<p align="left">
+  <img src="asset/broaf_map.gif" height="480" style="margin-right: 14px;">
+  <img src="asset/broaf_list.gif" height="480" style="margin-right: 14px;">
+</p>
+
+<br>
+
+## 🔬 주요 기술
+
+<details>
+<summary><strong>지도 & 경로</strong></summary>
+
+- **Kakao Map API** 마커/경로(Polyline)  
+- 현재 위치 추적
+- 경로 데이터 직렬화/복원
+</detail능 | png33030@yu.ac.kr |
+| 남은주 | 회원가입 및 로그 | yu21iarty@gmail.com |
+| 최지원 | 지도 및 공통 UI | polonej@ynu.ac.kr |
+
+### [🎨 Figma](https://www.figma.com/design/ojjw6nM2PrwB7v2TqnlNUr/SE---Broaf?node-id=0-1&t=xyoNiMJauPW6ysmE-1)
