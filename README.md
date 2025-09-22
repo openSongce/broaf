@@ -38,7 +38,7 @@
 
 ## ✨ 주요 기능
 
-1. **지도 피드**: 내 주변 포스트 클러스터링, 상세 보기   
+1. **지도 피드**: 내 주변 포스트 클러스터링, 상세 보기  
 2. **게시글 작성**: 사진/텍스트/위치 태그, 공개 범위 설정  
 3. **알림**: 댓글/좋아요/팔로우 알림
 
@@ -65,8 +65,55 @@
 - **Kakao Map API** 마커/경로(Polyline)  
 - 현재 위치 추적
 - 경로 데이터 직렬화/복원
-</detail능 | png33030@yu.ac.kr |
-| 남은주 | 회원가입 및 로그 | yu21iarty@gmail.com |
-| 최지원 | 지도 및 공통 UI | polonej@ynu.ac.kr |
+</details>
 
-### [🎨 Figma](https://www.figma.com/design/ojjw6nM2PrwB7v2TqnlNUr/SE---Broaf?node-id=0-1&t=xyoNiMJauPW6ysmE-1)
+<details>
+<summary><strong>UI/UX</strong></summary>
+
+- **XML 레이아웃** 기반 카드/리스트  
+- RecyclerView(Adapter·ViewHolder)  
+- Glide 이미지 로딩
+</details>
+
+<details>
+<summary><strong>백엔드 연동</strong></summary>
+
+- **Firebase**(Auth/RTDB or Firestore) 로그인·데이터 동기화  
+- (전환 준비) **Spring Boot** 백엔드로 이관 계획
+</details>
+
+<br>
+
+## 📚 기술 스택
+
+### 📱 Android
+- **Java** (Android Studio)  
+- XML 레이아웃, RecyclerView, Glide  
+- Google Play Services(Location)
+
+### ☁️ Backend/DB
+- **Firebase**(Auth + DB)  
+- (예정) Spring Boot + RDB
+
+<br>
+
+## 🏗️ 시스템 아키텍처
+<img src="asset/broaf_arch.png" width="820">
+
+- App ↔ Firebase(Auth/DB)  
+- 지도: Kakao Map API  
+- (전환 준비) App ↔ Spring Boot ↔ RDB
+
+<br>
+
+## 👨‍👩‍👧‍👦 팀원 정보
+| 이름 | 역할 | 메일 |
+| --- | --- | --- |
+| 송진우 | **지도/경로·리스트 UI·데이터 연동, 공지 기능** | rkddkwl059@naver.com |
+| 이승호 | 게시글 작성 및 삭제 | ssho1204@gmail.com |
+| 최지원 | 지도 및 공통 UI | polonej@ynu.ac.kr |
+| 김동욱 | 검색 및 내 정보 | steam162636@yu.ac.kr |
+| 박남규 | 친구 기능 | png33030@yu.ac.kr |
+| 남은주 | 회원 가입 및 로그인 | yu21iarty@gmail.com |
+
+
