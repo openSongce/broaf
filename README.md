@@ -116,4 +116,4 @@
 | 박남규 | 친구 기능 | png33030@yu.ac.kr |
 | 남은주 | 회원 가입 및 로그인 | yu21iarty@gmail.com |
 
-
+### [🎨 Figma](https://www.figma.com/design/ojjw6nM2PrwB7v2TqnlNUr/SE---Broaf?node-id=0-1&t=xyoNiMJauPW6ysmE-1)
